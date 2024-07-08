@@ -1,0 +1,2296 @@
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSurveys (20240703093528)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20240703093528"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2024-07-03 09:47:59.938669"], ["updated_at", "2024-07-03 09:47:59.938669"]]
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRecords (20240703102145)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "records" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "label" varchar, "input" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20240703102145"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRecords (20240703102145)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "records"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20240703102145"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRecords (20240703102145)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "records" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "label" varchar, "input" varchar, "survey_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_records_on_survey_id" ON "records" ("survey_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20240703102145"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRecords (20240703102145)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "records"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20240703102145"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRecords (20240703102145)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "records" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "label" varchar, "survey_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_records_on_survey_id" ON "records" ("survey_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20240703102145"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" ORDER BY "surveys"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" ORDER BY "surveys"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" ORDER BY "surveys"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started POST "/surveys" for ::1 at 2024-07-03 16:48:04 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SurveysController#create as */*
+  Parameters: {"name"=>"insurance", "description"=>"very important"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms | Allocations: 461)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.1.7.3) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.1.7.3) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.1.7.3) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.7.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.7.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.7.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.7.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.7.3) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.7.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.7.3) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.7.3) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.7.3) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.7.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.7.3) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.7.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.6.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.4) lib/rack/head.rb:12:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (6.1.7.3) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.3) lib/rails/engine.rb:539:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/surveys" for ::1 at 2024-07-03 16:49:35 +0530
+Processing by SurveysController#create as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms | Allocations: 469)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.1.7.3) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.1.7.3) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.1.7.3) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.7.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.7.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.7.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.7.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.7.3) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.7.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.7.3) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.7.3) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.7.3) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.7.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.7.3) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.7.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.6.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.4) lib/rack/head.rb:12:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (6.1.7.3) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.3) lib/rails/engine.rb:539:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/surveys" for ::1 at 2024-07-03 16:49:45 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SurveysController#create as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms | Allocations: 521)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.1.7.3) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.1.7.3) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.1.7.3) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.7.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.7.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.7.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.7.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.7.3) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.7.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.7.3) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.7.3) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.7.3) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.7.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.7.3) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.7.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.6.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.4) lib/rack/head.rb:12:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (6.1.7.3) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.3) lib/rails/engine.rb:539:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/surveys" for ::1 at 2024-07-03 16:50:14 +0530
+Processing by SurveysController#create as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms | Allocations: 469)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.1.7.3) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.1.7.3) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.1.7.3) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.7.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.7.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.7.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.7.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.7.3) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.7.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.7.3) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.7.3) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.7.3) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.7.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.7.3) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.7.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.6.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.4) lib/rack/head.rb:12:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (6.1.7.3) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.3) lib/rails/engine.rb:539:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/surveys" for ::1 at 2024-07-03 16:51:58 +0530
+Processing by SurveysController#index as */*
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSurvey Create (0.5ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "hiuo"], ["description", "cghk"], ["created_at", "2024-07-03 11:22:56.318780"], ["updated_at", "2024-07-03 11:22:56.318780"]]
+  [1m[36mTRANSACTION (11.9ms)[0m  [1m[36mcommit transaction[0m
+No template found for SurveysController#index, rendering head :no_content
+Completed 204 No Content in 152719ms (Allocations: 61967)
+
+
+Started POST "/surveys" for ::1 at 2024-07-03 16:54:40 +0530
+Processing by SurveysController#create as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (Allocations: 392)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.1.7.3) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.1.7.3) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.1.7.3) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.7.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.7.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.7.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.7.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.7.3) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.7.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.7.3) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.7.3) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.7.3) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.7.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.7.3) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.7.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.6.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.4) lib/rack/head.rb:12:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (6.1.7.3) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.3) lib/rails/engine.rb:539:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/surveys" for ::1 at 2024-07-03 16:55:38 +0530
+Processing by SurveysController#create as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (Allocations: 392)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.1.7.3) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.1.7.3) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.1.7.3) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.7.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.7.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.7.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.7.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.7.3) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.7.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.7.3) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.7.3) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.7.3) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.7.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.7.3) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.7.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.6.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.4) lib/rack/head.rb:12:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (6.1.7.3) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.3) lib/rails/engine.rb:539:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/surveys" for ::1 at 2024-07-03 16:56:42 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NoMethodError (undefined method `skip_before_filter' for SurveysController:Class
+Did you mean?  skip_before_action):
+  
+app/controllers/surveys_controller.rb:3:in `<class:SurveysController>'
+app/controllers/surveys_controller.rb:1:in `<main>'
+Started POST "/surveys" for ::1 at 2024-07-03 16:57:16 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SurveysController#create as */*
+No template found for SurveysController#create, rendering head :no_content
+Completed 204 No Content in 16734ms (ActiveRecord: 0.0ms | Allocations: 46229)
+
+
+Started POST "/surveys" for ::1 at 2024-07-03 16:57:41 +0530
+Processing by SurveysController#create as */*
+  Parameters: {"name"=>"insurance", "description"=>"very important"}
+No template found for SurveysController#create, rendering head :no_content
+Completed 204 No Content in 4882ms (ActiveRecord: 0.0ms | Allocations: 3851)
+
+
+Started POST "/surveys" for ::1 at 2024-07-03 17:02:19 +0530
+Processing by SurveysController#create as */*
+  Parameters: {"name"=>"insurance", "description"=>"very important"}
+Completed 400 Bad Request in 2ms (Allocations: 1248)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: survey
+Did you mean?  controller
+               description
+               name
+               action):
+  
+app/controllers/surveys_controller.rb:20:in `survey_params'
+app/controllers/surveys_controller.rb:6:in `create'
+Started POST "/surveys" for ::1 at 2024-07-03 17:02:47 +0530
+Processing by SurveysController#create as */*
+  Parameters: {"name"=>"insurance", "description"=>"very important"}
+Completed 400 Bad Request in 11141ms (Allocations: 3147)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: survey
+Did you mean?  controller
+               description
+               name
+               action):
+  
+app/controllers/surveys_controller.rb:21:in `survey_params'
+app/controllers/surveys_controller.rb:6:in `create'
+Started POST "/surveys" for ::1 at 2024-07-03 17:03:20 +0530
+Processing by SurveysController#create as */*
+  Parameters: {"name"=>"insurance", "description"=>"very important"}
+Completed 500 Internal Server Error in 1ms (Allocations: 1207)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/surveys_controller.rb:20:in `survey_params'
+app/controllers/surveys_controller.rb:6:in `create'
+Started POST "/surveys" for ::1 at 2024-07-03 17:03:36 +0530
+Processing by SurveysController#create as */*
+  Parameters: {"name"=>"insurance", "description"=>"very important"}
+Completed 500 Internal Server Error in 54080ms (Allocations: 5348)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/surveys_controller.rb:21:in `survey_params'
+app/controllers/surveys_controller.rb:6:in `create'
+Started POST "/surveys" for ::1 at 2024-07-03 17:05:05 +0530
+Processing by SurveysController#create as */*
+  Parameters: {"survey"=>{":name"=>"insurance", ":description"=>"very important"}}
+[31mUnpermitted parameters: ::name, ::description[0m
+[31mUnpermitted parameters: ::name, ::description[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+Completed 422 Unprocessable Entity in 22141ms (Views: 7.1ms | ActiveRecord: 1.6ms | Allocations: 11546)
+
+
+Started POST "/surveys" for ::1 at 2024-07-03 17:05:46 +0530
+Processing by SurveysController#create as */*
+  Parameters: {"survey"=>{"name"=>"insurance", "description"=>"very important"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+  [1m[36mSurvey Create (0.5ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "insurance"], ["description", "very important"], ["created_at", "2024-07-03 11:35:58.485737"], ["updated_at", "2024-07-03 11:35:58.485737"]]
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+Completed 201 Created in 11577ms (Views: 0.4ms | ActiveRecord: 2.9ms | Allocations: 9467)
+
+
+Started GET "/surveys" for ::1 at 2024-07-03 17:20:27 +0530
+Processing by SurveysController#index as */*
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 4549)
+
+
+Started GET "/surveys/1" for ::1 at 2024-07-03 17:20:53 +0530
+Processing by SurveysController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:24:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1236)
+
+
+Started GET "/surveys/2" for ::1 at 2024-07-03 17:20:57 +0530
+Processing by SurveysController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:24:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 832)
+
+
+Started DELETE "/surveys" for ::1 at 2024-07-03 17:22:11 +0530
+  
+ActionController::RoutingError (No route matches [DELETE] "/surveys"):
+  
+Started DELETE "/surveys" for ::1 at 2024-07-03 17:22:34 +0530
+  
+ActionController::RoutingError (No route matches [DELETE] "/surveys"):
+  
+Started DELETE "/surveys" for ::1 at 2024-07-03 17:22:42 +0530
+  
+ActionController::RoutingError (No route matches [DELETE] "/surveys"):
+  
+Started DELETE "/surveys" for ::1 at 2024-07-03 17:22:49 +0530
+  
+ActionController::RoutingError (No route matches [DELETE] "/surveys"):
+  
+Started DELETE "/surveys/1" for ::1 at 2024-07-03 17:22:59 +0530
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for SurveysController
+Did you mean?  delete
+               index
+               create
+               update):
+  
+actionpack (6.1.7.3) lib/abstract_controller/base.rb:160:in `process'
+actionview (6.1.7.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.6.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.4) lib/rack/head.rb:12:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (6.1.7.3) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.3) lib/rails/engine.rb:539:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started DELETE "/surveys/1" for ::1 at 2024-07-03 17:23:01 +0530
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for SurveysController
+Did you mean?  delete
+               index
+               create
+               update):
+  
+actionpack (6.1.7.3) lib/abstract_controller/base.rb:160:in `process'
+actionview (6.1.7.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.6.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.4) lib/rack/head.rb:12:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (6.1.7.3) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.6) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.3) lib/rails/engine.rb:539:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started DELETE "/surveys/1" for ::1 at 2024-07-03 17:23:21 +0530
+Processing by SurveysController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:33:in `destroy'
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:33:in `destroy'
+  [1m[36mSurvey Destroy (2.2ms)[0m  [1m[31mDELETE FROM "surveys" WHERE "surveys"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/surveys_controller.rb:34:in `destroy'
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 2.7ms | Allocations: 6914)
+
+
+Started DELETE "/surveys/2" for ::1 at 2024-07-03 17:28:10 +0530
+Processing by SurveysController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:33:in `destroy'
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:33:in `destroy'
+  [1m[36mSurvey Destroy (1.6ms)[0m  [1m[31mDELETE FROM "surveys" WHERE "surveys"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/surveys_controller.rb:34:in `destroy'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 6752)
+
+
+Started GET "/surveys" for ::1 at 2024-07-03 17:28:15 +0530
+Processing by SurveysController#index as */*
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 422 Unprocessable Entity in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 762)
+
+
+Started GET "/surveys/2" for ::1 at 2024-07-03 17:28:18 +0530
+Processing by SurveysController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:24:in `show'
+Completed 422 Unprocessable Entity in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 704)
+
+
+Started POST "/surveys" for ::1 at 2024-07-03 17:28:59 +0530
+Processing by SurveysController#create as */*
+  Parameters: {"survey"=>{"name"=>"insurance", "description"=>"very important"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+  [1m[36mSurvey Create (0.2ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "insurance"], ["description", "very important"], ["created_at", "2024-07-03 11:58:59.443689"], ["updated_at", "2024-07-03 11:58:59.443689"]]
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (11.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+Completed 201 Created in 17ms (Views: 0.2ms | ActiveRecord: 11.8ms | Allocations: 4542)
+
+
+Started PUT "/surveys/3" for ::1 at 2024-07-03 17:29:04 +0530
+Processing by SurveysController#update as */*
+  Parameters: {"survey"=>{"name"=>"xcgvhj"}, "id"=>"3"}
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:42:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/surveys_controller.rb:43:in `update'
+  [1m[36mSurvey Update (0.2ms)[0m  [1m[33mUPDATE "surveys" SET "name" = ?, "updated_at" = ? WHERE "surveys"."id" = ?[0m  [["name", "xcgvhj"], ["updated_at", "2024-07-03 11:59:04.066631"], ["id", 3]]
+  ↳ app/controllers/surveys_controller.rb:43:in `update'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/surveys_controller.rb:43:in `update'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 5039)
+
+
+Started PUT "/surveys/3" for ::1 at 2024-07-03 17:29:45 +0530
+Processing by SurveysController#update as */*
+  Parameters: {"survey"=>{"description"=>"most important"}, "id"=>"3"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:42:in `update'
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:42:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/surveys_controller.rb:43:in `update'
+  [1m[36mSurvey Update (0.2ms)[0m  [1m[33mUPDATE "surveys" SET "description" = ?, "updated_at" = ? WHERE "surveys"."id" = ?[0m  [["description", "most important"], ["updated_at", "2024-07-03 11:59:45.791085"], ["id", 3]]
+  ↳ app/controllers/surveys_controller.rb:43:in `update'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/surveys_controller.rb:43:in `update'
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:45:in `update'
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 2.3ms | Allocations: 9944)
+
+
+Started PUT "/surveys/3" for ::1 at 2024-07-03 17:29:49 +0530
+Processing by SurveysController#update as */*
+  Parameters: {"survey"=>{"name"=>"xcgvhj", "description"=>"most important"}, "id"=>"3"}
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:42:in `update'
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:45:in `update'
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 1875)
+
+
+Started PUT "/surveys/3" for ::1 at 2024-07-03 17:30:02 +0530
+Processing by SurveysController#update as */*
+  Parameters: {"survey"=>{"name"=>"xcgvhjlj;khjghcgvhbkjl;", "description"=>"most important and must"}, "id"=>"3"}
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:42:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/surveys_controller.rb:43:in `update'
+  [1m[36mSurvey Update (0.2ms)[0m  [1m[33mUPDATE "surveys" SET "name" = ?, "description" = ?, "updated_at" = ? WHERE "surveys"."id" = ?[0m  [["name", "xcgvhjlj;khjghcgvhbkjl;"], ["description", "most important and must"], ["updated_at", "2024-07-03 12:00:02.634184"], ["id", 3]]
+  ↳ app/controllers/surveys_controller.rb:43:in `update'
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/surveys_controller.rb:43:in `update'
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:45:in `update'
+Completed 200 OK in 19ms (Views: 0.3ms | ActiveRecord: 12.5ms | Allocations: 5809)
+
+
+Started PUT "/surveys/3" for ::1 at 2024-07-03 22:05:17 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SurveysController#update as */*
+  Parameters: {"survey"=>{"name"=>"xcgvhjlj;khjghcgvhbkjl;", "description"=>"most important and must", "label"=>"[label 1, lable 2, label 3]"}, "id"=>"3"}
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:42:in `update'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms | Allocations: 6541)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'label' for Survey.):
+  
+app/controllers/surveys_controller.rb:43:in `update'
+Started PUT "/surveys/3" for ::1 at 2024-07-03 22:05:50 +0530
+Processing by SurveysController#update as */*
+  Parameters: {"survey"=>{"name"=>"xcgvhjlj;khjghcgvhbkjl;", "description"=>"most important and must", "label"=>"[label 1, lable 2, label 3]"}, "id"=>"3"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:42:in `update'
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:42:in `update'
+[31mUnpermitted parameter: :label[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:46:in `update'
+Completed 200 OK in 103265ms (Views: 0.9ms | ActiveRecord: 0.8ms | Allocations: 59477)
+
+
+Started PUT "/surveys/3" for ::1 at 2024-07-03 22:09:38 +0530
+Processing by SurveysController#update as */*
+  Parameters: {"survey"=>{"name"=>"xcgvhjlj;khjghcgvhbkjl;", "description"=>"most important and must", "label"=>["label 1, lable 2, label 3"]}, "id"=>"3"}
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:42:in `update'
+[31mUnpermitted parameter: :label[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:46:in `update'
+Completed 200 OK in 165261ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 4783)
+
+
+Started PUT "/surveys/3" for ::1 at 2024-07-03 22:13:05 +0530
+Processing by SurveysController#update as */*
+  Parameters: {"survey"=>{"name"=>"xcgvhjlj;khjghcgvhbkjl;", "description"=>"most important and must", "label"=>{"1"=>"label 1", "2"=>"label 2", "3"=>"label 3"}}, "id"=>"3"}
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:42:in `update'
+[31mUnpermitted parameter: :label[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:46:in `update'
+Completed 200 OK in 61832ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 7077)
+
+
+Started PUT "/surveys/3" for ::1 at 2024-07-03 22:14:19 +0530
+Processing by SurveysController#update as */*
+  Parameters: {"survey"=>{"name"=>"xcgvhjlj;khjghcgvhbkjl;", "description"=>"most important and must", "label"=>"label 3"}, "id"=>"3"}
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:42:in `update'
+[31mUnpermitted parameter: :label[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:46:in `update'
+Completed 200 OK in 7349ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 4817)
+
+
+Started PUT "/surveys/3" for ::1 at 2024-07-03 22:16:25 +0530
+Processing by SurveysController#update as */*
+  Parameters: {"survey"=>{"name"=>"xcgvhjlj;khjghcgvhbkjl;", "description"=>"most important and must", "label"=>{"1"=>"label 1", "2"=>"label 2", "3"=>"label 3"}}, "id"=>"3"}
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:42:in `update'
+[31mUnpermitted parameter: :label[0m
+  [1m[36mRecord Load (10.9ms)[0m  [1m[34mSELECT "records".* FROM "records" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/surveys_controller.rb:45:in `update'
+  [1m[36mCACHE Record Load (0.0ms)[0m  [1m[34mSELECT "records".* FROM "records" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/surveys_controller.rb:45:in `update'
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:46:in `update'
+Completed 200 OK in 191473ms (Views: 0.8ms | ActiveRecord: 11.9ms | Allocations: 22960)
+
+
+Started PUT "/surveys/3" for ::1 at 2024-07-03 22:19:39 +0530
+Processing by SurveysController#update as */*
+  Parameters: {"survey"=>{"name"=>"xcgvhjlj;khjghcgvhbkjl;", "description"=>"most important and must", "label"=>{"1"=>"label 1", "2"=>"label 2", "3"=>"label 3"}}, "id"=>"3"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:42:in `update'
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:42:in `update'
+[31mUnpermitted parameter: :label[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:49:in `update'
+Completed 200 OK in 14129ms (Views: 0.7ms | ActiveRecord: 1.5ms | Allocations: 31501)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mRecord Load (0.1ms)[0m  [1m[34mSELECT "records".* FROM "records" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started PUT "/surveys/3" for ::1 at 2024-07-03 22:20:50 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SurveysController#update as */*
+  Parameters: {"survey"=>{"name"=>"xcgvhjlj;khjghcgvhbkjl;", "description"=>"most important and must", "label"=>{"1"=>"label 1", "2"=>"label 2", "3"=>"label 3"}}, "id"=>"3"}
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:42:in `update'
+[31mUnpermitted parameter: :label[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:48:in `update'
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 13869)
+
+
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mRecord Load (0.1ms)[0m  [1m[34mSELECT "records".* FROM "records" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started PUT "/surveys/3" for ::1 at 2024-07-03 22:21:09 +0530
+Processing by SurveysController#update as */*
+  Parameters: {"survey"=>{"name"=>"xcgvhjlj;khjghcgvhbkjl;", "description"=>"most important and must", "label"=>{"1"=>"label 1", "2"=>"label 2", "3"=>"label 3"}}, "id"=>"3"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:42:in `update'
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:42:in `update'
+[31mUnpermitted parameter: :label[0m
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."survey_id" = ? /* loading for inspect */ LIMIT ?[0m  [["survey_id", 3], ["LIMIT", 11]]
+  ↳ app/controllers/surveys_controller.rb:47:in `block in update'
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:49:in `update'
+Completed 200 OK in 233786ms (Views: 0.8ms | ActiveRecord: 1.8ms | Allocations: 194571)
+
+
+Started PUT "/surveys/3" for ::1 at 2024-07-03 22:25:08 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SurveysController#update as */*
+  Parameters: {"survey"=>{"name"=>"xcgvhjlj;khjghcgvhbkjl;", "description"=>"most important and must", "label"=>{"1"=>"label 1", "2"=>"label 2", "3"=>"label 3"}}, "id"=>"3"}
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:42:in `update'
+[31mUnpermitted parameter: :label[0m
+  [1m[36mSurvey Load (0.3ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:49:in `update'
+Completed 200 OK in 691818ms (Views: 0.7ms | ActiveRecord: 1.5ms | Allocations: 71441)
+
+
+Started PUT "/surveys/3" for ::1 at 2024-07-03 22:51:22 +0530
+Processing by SurveysController#update as */*
+  Parameters: {"survey"=>{"name"=>"", "description"=>"most important and must", "label"=>{"1"=>"label 1", "2"=>"label 2", "3"=>"label 3"}}, "id"=>"3"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:42:in `update'
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:42:in `update'
+[31mUnpermitted parameter: :label[0m
+Completed 422 Unprocessable Entity in 11ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 7316)
+
+
+Started PUT "/surveys/3" for ::1 at 2024-07-04 16:42:28 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SurveysController#update as */*
+  Parameters: {"survey"=>{"name"=>"", "description"=>"most important and must", "label"=>{"1"=>"label 1", "2"=>"label 2", "3"=>"label 3"}}, "id"=>"3"}
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:42:in `update'
+[31mUnpermitted parameter: :label[0m
+Completed 422 Unprocessable Entity in 20172ms (Views: 13.8ms | ActiveRecord: 1.0ms | Allocations: 59556)
+
+
+Started PUT "/surveys/3" for ::1 at 2024-07-04 16:48:31 +0530
+Processing by SurveysController#update as */*
+  Parameters: {"survey"=>{"name"=>"", "description"=>"most important and must", "label"=>{"1"=>"label 1", "2"=>"label 2", "3"=>"label 3"}}, "id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:42:in `update'
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:42:in `update'
+[31mUnpermitted parameter: :label[0m
+Completed 422 Unprocessable Entity in 116834ms (Views: 3.3ms | ActiveRecord: 0.8ms | Allocations: 33800)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-04 22:06:13 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rails/.rvm/gems/ruby-3.0.0/gems/railties-6.1.7.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rails/.rvm/gems/ruby-3.0.0/gems/railties-6.1.7.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.7ms | Allocations: 520)
+Completed 200 OK in 23ms (Views: 17.0ms | ActiveRecord: 0.0ms | Allocations: 4253)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-04 22:06:30 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rails/.rvm/gems/ruby-3.0.0/gems/railties-6.1.7.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rails/.rvm/gems/ruby-3.0.0/gems/railties-6.1.7.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.0ms | Allocations: 222)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 963)
+
+
+Started GET "/movies" for ::1 at 2024-07-04 22:06:54 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/movies"):
+  
+Started GET "/" for ::1 at 2024-07-04 22:06:59 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rails/.rvm/gems/ruby-3.0.0/gems/railties-6.1.7.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rails/.rvm/gems/ruby-3.0.0/gems/railties-6.1.7.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 45)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 404)
+
+
+Started GET "/" for ::1 at 2024-07-04 22:07:04 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rails/.rvm/gems/ruby-3.0.0/gems/railties-6.1.7.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rails/.rvm/gems/ruby-3.0.0/gems/railties-6.1.7.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 45)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 402)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-04 22:10:36 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 6962)
+
+
+Started GET "/" for ::1 at 2024-07-04 22:12:43 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 924)
+
+
+Started GET "/" for ::1 at 2024-07-04 22:12:46 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.1ms | Allocations: 919)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-04 22:19:04 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 6706)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-04 22:19:06 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 924)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-04 22:41:23 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 6706)
+
+
+Started GET "/" for ::1 at 2024-07-04 22:42:09 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 924)
+
+
+Started GET "/ws" for 127.0.0.1 at 2024-07-05 17:33:29 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/surveys" for ::1 at 2024-07-05 17:33:30 +0530
+Processing by SurveysController#index as */*
+  [1m[36mSurvey Load (0.4ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 6627)
+
+
+Started GET "/ws" for 127.0.0.1 at 2024-07-05 17:33:37 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for 127.0.0.1 at 2024-07-05 17:33:53 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/surveys" for 127.0.0.1 at 2024-07-05 17:34:17 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 919)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2024-07-05 17:34:22 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 906)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2024-07-05 17:34:22 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.1ms | Allocations: 928)
+
+
+Started GET "/ws" for 127.0.0.1 at 2024-07-05 17:34:25 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/surveys" for 127.0.0.1 at 2024-07-05 17:35:19 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 918)
+
+
+Started GET "/ws" for 127.0.0.1 at 2024-07-05 17:35:29 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/surveys" for 127.0.0.1 at 2024-07-05 17:36:04 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1308)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2024-07-05 17:36:04 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 965)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2024-07-05 17:37:28 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.4ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 907)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2024-07-05 17:37:37 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 906)
+
+
+Started GET "/ws" for 127.0.0.1 at 2024-07-05 17:37:38 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/surveys" for 127.0.0.1 at 2024-07-05 17:37:51 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 905)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2024-07-05 17:38:00 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 906)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2024-07-05 17:41:17 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+Started GET "/surveys" for 127.0.0.1 at 2024-07-05 17:41:17 +0530
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 2295)
+
+
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 906)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2024-07-05 17:41:34 +0530
+Started GET "/surveys" for 127.0.0.1 at 2024-07-05 17:41:34 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 960)
+
+
+Processing by SurveysController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1565)
+
+
+Started GET "/ws" for 127.0.0.1 at 2024-07-05 17:41:54 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/surveys" for 127.0.0.1 at 2024-07-05 17:46:44 +0530
+Started GET "/surveys" for 127.0.0.1 at 2024-07-05 17:46:44 +0530
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SurveysController#index as HTML
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 15ms (Views: 0.5ms | ActiveRecord: 0.7ms | Allocations: 7351)
+
+
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 5662)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2024-07-05 17:47:05 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 921)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2024-07-05 17:47:05 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 919)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2024-07-05 17:48:31 +0530
+Started GET "/surveys" for 127.0.0.1 at 2024-07-05 17:48:31 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SurveysController#index as HTML
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 7349)
+
+
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 17ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 7838)
+
+
+Started POST "/surveys" for ::1 at 2024-07-05 17:48:42 +0530
+Processing by SurveysController#create as */*
+  Parameters: {"survey"=>{"name"=>"insurance", "description"=>"very important"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+  [1m[36mSurvey Create (0.8ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "insurance"], ["description", "very important"], ["created_at", "2024-07-05 12:18:42.522572"], ["updated_at", "2024-07-05 12:18:42.522572"]]
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+Completed 201 Created in 7ms (Views: 0.2ms | ActiveRecord: 2.5ms | Allocations: 5340)
+
+
+Started GET "/surveys" for ::1 at 2024-07-05 17:48:46 +0530
+Processing by SurveysController#index as */*
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1028)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2024-07-05 17:48:54 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+Started GET "/surveys" for 127.0.0.1 at 2024-07-05 17:48:54 +0530
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1337)
+
+
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 1035)
+
+
+Started GET "/ws" for 127.0.0.1 at 2024-07-05 17:50:26 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/" for 127.0.0.1 at 2024-07-05 18:26:54 +0530
+Processing by SurveysController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 1673)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2024-07-05 18:27:14 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1031)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2024-07-05 18:27:14 +0530
+Processing by SurveysController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1674)
+
+
+Started GET "/" for ::1 at 2024-07-05 18:29:58 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/" for ::1 at 2024-07-05 18:30:00 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1022)
+
+
+Started GET "/" for ::1 at 2024-07-05 18:30:02 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-05 18:30:08 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1023)
+
+
+Started GET "/surveys" for ::1 at 2024-07-05 18:30:08 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2024-07-06 14:48:16 +0530
+Started GET "/surveys" for 127.0.0.1 at 2024-07-06 14:48:16 +0530
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SurveysController#index as HTML
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.3ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 14ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 7508)
+
+
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 8107)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 14:52:23 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1037)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 14:52:23 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1035)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 15:05:47 +0530
+Processing by SurveysController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 1692)
+
+
+Started POST "/surveys" for ::1 at 2024-07-06 15:07:18 +0530
+Processing by SurveysController#create as */*
+  Parameters: {"survey"=>{"name"=>"rahul", "description"=>"haryana wale"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+  [1m[36mSurvey Create (0.4ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "rahul"], ["description", "haryana wale"], ["created_at", "2024-07-06 09:37:18.819617"], ["updated_at", "2024-07-06 09:37:18.819617"]]
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+Completed 201 Created in 6ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 5253)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 15:07:24 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.1ms | Allocations: 1138)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 15:07:24 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 1136)
+
+
+Started DELETE "/surveys/5" for ::1 at 2024-07-06 15:11:25 +0530
+Processing by SurveysController#destroy as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE "surveys"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/surveys_controller.rb:33:in `destroy'
+  [1m[36mSurvey Destroy (1.7ms)[0m  [1m[31mDELETE FROM "surveys" WHERE "surveys"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/surveys_controller.rb:34:in `destroy'
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 6133)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 15:11:42 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 15:11:42 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 15:33:17 +0530
+Processing by SurveysController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1672)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 15:33:17 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 15:33:54 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 15:34:34 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 15:34:49 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1023)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 15:34:49 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:03:59 +0530
+Processing by SurveysController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 1672)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:04:06 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:04:17 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:04:17 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:05:48 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:05:48 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:06:44 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:06:58 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:07:10 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:08:28 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:08:28 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:08:56 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:08:56 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:09:05 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:09:05 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:10:20 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:10:20 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:10:38 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:10:38 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:10:50 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:10:50 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:14:35 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:14:35 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:14:40 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:14:40 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:14:41 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:14:41 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2024-07-06 16:14:49 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+Started GET "/surveys" for 127.0.0.1 at 2024-07-06 16:14:49 +0530
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1319)
+
+
+Processing by SurveysController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 1672)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:16:08 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:16:08 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:24:46 +0530
+Processing by SurveysController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+  [1m[36mSurvey Load (0.3ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.8ms | Allocations: 1672)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:24:46 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:27:03 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:27:03 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 1022)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2024-07-06 16:27:08 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1501)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2024-07-06 16:27:08 +0530
+Processing by SurveysController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1672)
+
+
+Started POST "/surveys" for ::1 at 2024-07-06 16:27:59 +0530
+Processing by SurveysController#create as HTML
+  Parameters: {"name"=>"John Doe", "survey"=>{"name"=>"John Doe"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+  [1m[36mSurvey Create (0.2ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "John Doe"], ["created_at", "2024-07-06 10:57:59.822195"], ["updated_at", "2024-07-06 10:57:59.822195"]]
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+Completed 201 Created in 19ms (Views: 0.3ms | ActiveRecord: 12.4ms | Allocations: 4520)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:27:59 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1132)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:27:59 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1130)
+
+
+Started POST "/surveys" for ::1 at 2024-07-06 16:28:11 +0530
+Processing by SurveysController#create as HTML
+  Parameters: {"name"=>"John Doe", "survey"=>{"name"=>"John Doe"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+  [1m[36mSurvey Create (0.3ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "John Doe"], ["created_at", "2024-07-06 10:58:11.842822"], ["updated_at", "2024-07-06 10:58:11.842822"]]
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+Completed 201 Created in 20ms (Views: 0.3ms | ActiveRecord: 12.6ms | Allocations: 4529)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:28:12 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.1ms | Allocations: 1241)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:28:12 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.1ms | Allocations: 1239)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2024-07-06 16:29:01 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.1ms | Allocations: 1239)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2024-07-06 16:29:01 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1239)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:29:01 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.1ms | Allocations: 1239)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:29:01 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 1239)
+
+
+Started POST "/surveys" for ::1 at 2024-07-06 16:30:15 +0530
+Processing by SurveysController#create as */*
+  Parameters: {"name"=>"dxfchg", "survey"=>{"name"=>"dxfchg"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+  [1m[36mSurvey Create (0.2ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "dxfchg"], ["created_at", "2024-07-06 11:00:15.812480"], ["updated_at", "2024-07-06 11:00:15.812480"]]
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (39.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+Completed 201 Created in 45ms (Views: 0.2ms | ActiveRecord: 39.5ms | Allocations: 3964)
+
+
+Started POST "/surveys" for ::1 at 2024-07-06 16:30:29 +0530
+Processing by SurveysController#create as */*
+  Parameters: {"name"=>"dxfchg", "survey"=>{"name"=>"dxfchg"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+  [1m[36mSurvey Create (0.2ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "dxfchg"], ["created_at", "2024-07-06 11:00:29.277025"], ["updated_at", "2024-07-06 11:00:29.277025"]]
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+Completed 201 Created in 18ms (Views: 0.3ms | ActiveRecord: 12.3ms | Allocations: 4528)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:30:38 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.1ms | Allocations: 1457)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2024-07-06 16:41:38 +0530
+Started GET "/surveys" for 127.0.0.1 at 2024-07-06 16:41:38 +0530
+Processing by SurveysController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SurveysController#index as HTML
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 2937)
+
+
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 3747)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:41:39 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1455)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:41:39 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1455)
+
+
+Started POST "/surveys" for ::1 at 2024-07-06 16:41:57 +0530
+Processing by SurveysController#create as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 596)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: survey
+Did you mean?  controller
+               action):
+  
+app/controllers/surveys_controller.rb:61:in `survey_params'
+app/controllers/surveys_controller.rb:6:in `create'
+Started GET "/surveys" for ::1 at 2024-07-06 16:45:44 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1454)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:45:44 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 1455)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2024-07-06 16:51:49 +0530
+Processing by SurveysController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 2474)
+
+
+Started GET "/surveys" for 127.0.0.1 at 2024-07-06 16:51:49 +0530
+Processing by SurveysController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 2105)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:51:54 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1455)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 16:51:54 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 1455)
+
+
+Started POST "/surveys" for ::1 at 2024-07-06 16:52:02 +0530
+Processing by SurveysController#create as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 563)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: survey
+Did you mean?  controller
+               action):
+  
+app/controllers/surveys_controller.rb:61:in `survey_params'
+app/controllers/surveys_controller.rb:6:in `create'
+Started GET "/surveys" for ::1 at 2024-07-06 16:52:07 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.1ms | Allocations: 1454)
+
+
+Started POST "/surveys" for ::1 at 2024-07-06 17:00:23 +0530
+Processing by SurveysController#create as */*
+Completed 400 Bad Request in 92971ms (Allocations: 67470)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: survey
+Did you mean?  controller
+               action):
+  
+app/controllers/surveys_controller.rb:62:in `survey_params'
+app/controllers/surveys_controller.rb:6:in `create'
+Started GET "/surveys" for ::1 at 2024-07-06 17:01:56 +0530
+Started POST "/surveys" for ::1 at 2024-07-06 17:01:56 +0530
+Processing by SurveysController#create as */*
+Completed 400 Bad Request in 775ms (Allocations: 8002)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: survey
+Did you mean?  controller
+               action):
+  
+app/controllers/surveys_controller.rb:62:in `survey_params'
+app/controllers/surveys_controller.rb:6:in `create'
+Processing by SurveysController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 7161)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 17:01:57 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 0.1ms | Allocations: 7303)
+
+
+Started POST "/surveys" for ::1 at 2024-07-06 17:03:04 +0530
+Processing by SurveysController#create as */*
+  Parameters: {"survey"=>{"name"=>"dfxcgvbhjk", "description"=>"xtctvubjknlm"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+  [1m[36mSurvey Create (0.4ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "dfxcgvbhjk"], ["description", "xtctvubjknlm"], ["created_at", "2024-07-06 11:37:22.716201"], ["updated_at", "2024-07-06 11:37:22.716201"]]
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+Completed 201 Created in 258050ms (Views: 4.8ms | ActiveRecord: 2.4ms | Allocations: 12519)
+
+
+Started POST "/surveys" for ::1 at 2024-07-06 17:09:08 +0530
+Processing by SurveysController#create as */*
+Completed 400 Bad Request in 10495ms (ActiveRecord: 0.0ms | Allocations: 7607)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: survey
+Did you mean?  controller
+               action):
+  
+app/controllers/surveys_controller.rb:62:in `survey_params'
+app/controllers/surveys_controller.rb:6:in `create'
+Started POST "/surveys" for ::1 at 2024-07-06 17:13:20 +0530
+Processing by SurveysController#create as */*
+Completed 400 Bad Request in 8304ms (ActiveRecord: 0.0ms | Allocations: 7634)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: survey
+Did you mean?  controller
+               action):
+  
+app/controllers/surveys_controller.rb:62:in `survey_params'
+app/controllers/surveys_controller.rb:6:in `create'
+Started GET "/surveys" for 127.0.0.1 at 2024-07-06 17:24:12 +0530
+Processing by SurveysController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Started GET "/surveys" for 127.0.0.1 at 2024-07-06 17:24:12 +0530
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 3587)
+
+
+Processing by SurveysController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 2503)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 17:24:12 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1569)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 17:24:12 +0530
+Processing by SurveysController#index as HTML
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.1ms | Allocations: 1569)
+
+
+Started POST "/surveys" for ::1 at 2024-07-06 17:42:11 +0530
+Processing by SurveysController#create as */*
+  Parameters: {"survey"=>{"name"=>"hars", "description"=>"fgh"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+  [1m[36mSurvey Create (0.2ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "hars"], ["description", "fgh"], ["created_at", "2024-07-06 12:12:23.897172"], ["updated_at", "2024-07-06 12:12:23.897172"]]
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (31.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+Completed 201 Created in 12074ms (Views: 0.5ms | ActiveRecord: 32.2ms | Allocations: 11957)
+
+
+Started POST "/surveys" for ::1 at 2024-07-06 17:42:43 +0530
+Processing by SurveysController#create as */*
+  Parameters: {"survey"=>{"name"=>"hars", "description"=>"fgh"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+  [1m[36mSurvey Create (0.2ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "hars"], ["description", "fgh"], ["created_at", "2024-07-06 12:13:10.180270"], ["updated_at", "2024-07-06 12:13:10.180270"]]
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (32.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/surveys_controller.rb:6:in `create'
+Completed 201 Created in 27170ms (Views: 1.0ms | ActiveRecord: 33.2ms | Allocations: 10138)
+
+
+Started GET "/surveys" for ::1 at 2024-07-06 17:43:21 +0530
+Processing by SurveysController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys"[0m
+  ↳ app/controllers/surveys_controller.rb:16:in `index'
+Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 0.6ms | Allocations: 6266)
+
+
